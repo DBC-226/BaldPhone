@@ -1,0 +1,22 @@
+name: Update forked repository
+
+# add the original repository as remote repository called "upstream"
+git remote add upstream https://github.com/UriahShaulMandel/BaldPhone.git
+
+# fetch all changes from the upstream repository
+git fetch upstream
+
+# switch to the master branch of your fork
+git checkout master
+
+# merge changes from the upstream repository into your fork
+git merge upstream/master
+
+# switch to your feature branch
+git checkout Danish-translation
+
+# commit all changes in your feature-branch
+git commit -m Commitbeforeimplementingoriginalrepochanges
+
+# update your feature branch from the master branch
+git rebase master
